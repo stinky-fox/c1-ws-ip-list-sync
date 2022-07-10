@@ -1,5 +1,6 @@
 # About
 Sync IP addresses from AbuseIPDB and Trend Micro Cloud One Workload Security IP List.
+Was design for Cloud One Workload Security first but with can be adjusted to use with self-hosted Trend Micro Deep Security.
 
 # Requirments:
 
