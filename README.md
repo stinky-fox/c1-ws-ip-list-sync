@@ -1,6 +1,6 @@
 # About
 Sync IP addresses from AbuseIPDB and Trend Micro Cloud One Workload Security IP List.
-Was design for Cloud One Workload Security first but with can be adjusted to use with self-hosted Trend Micro Deep Security.
+This script is designed for Cloud One Workload Security first but can be adjusted to use with self-hosted Trend Micro Deep Security.
 
 # Requirments:
 
@@ -11,11 +11,11 @@ Was design for Cloud One Workload Security first but with can be adjusted to use
 # Variables
 
 This script is using variables for API Keys, Regions and other. The following variables must be defined:
-ABUSEIPDB_APIKEY= Your AbuseIP DB API Key. 
-ABUSEIPDB_CFDLVL= Confidence Level (more https://docs.abuseipdb.com/#blacklist-endpoint)
-C1WS_APIKEY= Your Cloud One Workload Security API key
-C1WS_IPLIST_ID= The ID of IP list you're trying to update. Can be extracted from URL or via the API
-C1WS_REGION= Your Cloud One Workload Security Region
+- ABUSEIPDB_APIKEY= Your AbuseIP DB API Key. 
+- ABUSEIPDB_CFDLVL= Confidence Level (more https://docs.abuseipdb.com/#blacklist-endpoint)
+- C1WS_APIKEY= Your Cloud One Workload Security API key
+- C1WS_IPLIST_ID= The ID of IP list you're trying to update. Can be extracted from URL or via the API
+- C1WS_REGION= Your Cloud One Workload Security Region
 
 # Usage as a scheduled task on any server
 
