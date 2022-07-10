@@ -74,11 +74,13 @@ def abusedbApiCaller(config):
         sys.exit()
 '''
 Separate function to extract IP Addresses from dictionary and build the list.
+C1WS List maximum length is 32671 characters (32671/16=2041). 
+This function extracts first 2040 IPs from abuseipdb report
 '''
 
 def buildList(rawData):
     stackedIpList = []
-    for record in range(len(rawData['data'])):
+    for record in range(0, 2040):
         stackedIpList.append(rawData['data'][record]['ipAddress'])
     return(stackedIpList)
 
@@ -100,7 +102,8 @@ def c1wsApiCaller(c1wsApi,newIpList):
     if callApi.status_code == 200:
         message = "Status code: " + str(callApi.status_code) + ". IP List with ID: " + str(c1wsApi['ipListId']) + " was updated."
     else:
-        message = "Status code: " + str(callApi.status_code) + ". IP List with ID: " + str(c1wsApi['ipListId']) + " wasn't updated"
+        message = "Status code: " + str(callApi.status_code) + ". IP List with ID: " + str(c1wsApi['ipListId']) \
+            + " wasn't updated. Reason: " + str(callApi.content)
     return(message)
 
 
